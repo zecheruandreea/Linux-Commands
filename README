@@ -1,0 +1,70 @@
+// Functia touch() : //
+ 
+ - Initial, creem un final_file (in directorul curent parent) si ii //
+ dam next-ul la Null, deoarece va fi ultimul in lista de fisiere.   //  
+ - Verificam daca exista final_file in lista de fisiere.            //
+ - Daca lista de fisiere este goala, final_file va fi head-ul       //
+ listei. Altfel, iteram prin lista si daca se gaseste numele        //
+ file-ului pe care vrem sa-l creem, afisam "File already exists".   //
+ - Daca final_file nu exista, il adaugam la final in lista de       //
+ fisiere.                                                           //
+
+// Functia mkdir() : //
+
+- Analog functiei touch, creem un final_dir.                        //
+- Daca lista de directoare e goala, final_dir va fi head-ul listei. //
+Altfel, iteram prin lista si daca se gaseste numele dir-ului pe     //  
+care vrem sa-l creem, afisam "Dir already exists".                  //
+- Al doilea if din while verifica daca si ultimul director din      //
+lista are acelasi nume cu cel pe care vrem sa-l creem.              //
+- Daca final_dir nu exista, il adaugam la finalul listei de         //
+directoare.
+
+// Functia ls() : //
+
+- Luam 2 iteratori, unul pentru directoare si unul pentru fisiere,  //
+cu care parcurgem listele.                                          //
+- Parcurgem fiecare lista pe rand, pana la final si afisam numele   //
+directoarelor,respectiv a fisierelor, in aceasta ordine.            //
+
+// Functia rm() : //
+
+- Verificam daca exista directorul curent din care vrem sa stergem  //
+fisierul si daca nu exista afisam "Could not find the file".        //
+- Apoi verificam daca lista de fisiere din director este goala.     //
+Daca este goala se afiseaza acelasi mesaj ca cel de sus.            //
+- Daca lista are copii, mai intai verificam ca primul element sa    //
+aiba acelasi nume cu fisierul pe care vrem sa l stergem si daca e,  //
+il stergem. Apoi, iteram prin lista incepand cu al doilea elem. si  //
+daca gasim acelasi nume cu numele fisierului pe care vrem sa l      //
+stergem, stergem acel fisier, luand o variabila care sa tina minte  //
+elementul din mijloc pentru a putea ajunge la urmatorul.            //
+- Eliminam memoria fisierelor acolo unde este nevoie, dupa ce       //
+ne-am folosit de acestea.                                           //
+
+// Functia rmdir(): //
+
+- Analog functiei rm se mai sus.                                    //
+
+// Functia cd(): //
+
+- Initial verificam daca introducem comanda "cd ..", implicit daca  //
+numele directorului in care vrem sa ne mutam este "..".             //
+- Daca este ".." avem doua cazuri. Primul, in care direcetorul      //
+curent nu are parinte, iar atunci nu se va schimba directorul       //
+curent. Al doilea caz, in care directorul ara parinte si            //
+directorul curent se va schimba in parintele acestuia.              //
+- Apoi parcurgem lista de directoare a directorului curent si       //
+daca dam de directorul cu numele name, updatez targetul la          //
+directorul respectiv.                                               //
+
+// Functia stop(): // 
+
+- Opreste programul, elibereaza memoria directorul curent si 
+sterge tot din acesta.
+
+// Functia free: // 
+
+- Elibereaza memoria unui director/fisier si a continutului 
+acestuia si sterge tot ce se afla in interiorul sau.
+  
